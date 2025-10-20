@@ -98,7 +98,6 @@ ng generate pipe pipe-name
 
 - Angular 19
 - TypeScript 5.8
-- Bootstrap Icons
 - Material Icons
 - RxJS
 

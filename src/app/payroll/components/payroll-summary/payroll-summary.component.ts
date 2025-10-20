@@ -54,7 +54,7 @@ export class PayrollSummaryComponent {
     const deductions: IOverviewCardItem[] = this.deductions().deductions.map(deduction => ({
       label: deduction.type,
       value: deduction.amount,
-      icon: this.deductionsIconsMap[deduction.type] || 'bi-dash-circle',
+      icon: this.deductionsIconsMap[deduction.type] || 'remove_circle',
       iconColor: '#7A9933',
       iconBackgroundColor: '#F5F9EC'
     }) as IOverviewCardItem) as IOverviewCardItem[];

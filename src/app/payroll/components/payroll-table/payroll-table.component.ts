@@ -17,7 +17,7 @@ export class PayrollTableComponent {
 
   protected columns: IDataTableColumn<IPayrollItem>[] = [
       { key: 'id', header: 'ID', hide: true, notSearchable: true },
-      { key: 'important', header: '', width: '5%', notSearchable: true, type: DataTableColumnType.icon, displayFn: (value) => value ? 'bi-exclamation-circle-fill' : '' },
+      { key: 'important', header: '', width: '5%', notSearchable: true, type: DataTableColumnType.icon, displayFn: (value) => value ? 'error_circle' : '' },
       { key: 'name', header: 'Name', type: DataTableColumnType.text, sortable: true },
       { key: 'description', header: 'Description', type: DataTableColumnType.text, sortable: true },
       { key: 'type', header: 'Type', type: DataTableColumnType.text, sortable: true },
