@@ -166,5 +166,13 @@ th {
 }
 
 td {
+  color: var(--text-g-800);
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.25px;
+  vertical-align: middle;
+
   cursor: default;
 }

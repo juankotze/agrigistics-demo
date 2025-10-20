@@ -13,7 +13,7 @@
                             [hidden]="column.hide" 
                             [ngClass]="{'sortable': column.sortable}"
                             (click)="handleSort(column)">
-                            <div class="th-content">
+                            <div class="th-content" [ngClass]="column.type === DataTableColumnType.currency ? 'right' : ''">
                                 {{ column.header }}
                                 @if(column.sortable) {
                                     <i class="material-icons" [class.active]="sortColumn() === column.key">
@@ -47,7 +47,8 @@
                                         <input type="checkbox" [checked]="!!row[column.key]" disabled />
                                     }
                                     @case(DataTableColumnType.icon) {
-                                        <i class="bi" [class]="column.displayFn ? column.displayFn(row[column.key], row) : ''"></i>
+                                        @let icon = column.displayFn ? column.displayFn(row[column.key], row) : '';
+                                        <i class="material-icons">{{ icon }}</i>
                                     }
                                     @case(DataTableColumnType.currency) {
                                         @if(row[column.key] != null) {
