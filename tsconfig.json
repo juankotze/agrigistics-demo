@@ -16,7 +16,7 @@
 
     "resolveJsonModule": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
 
 
     "importHelpers": true,
