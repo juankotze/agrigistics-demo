@@ -18,23 +18,23 @@ export class LeftSidenavComponent {
   protected readonly navLinks: NavLink[] = [
     {
       path: 'dashboard',
-      label: 'Dashboard',
-      icon: 'dashboard'
+      label: 'Item 1',
+      icon: 'home'
     },
     {
       path: 'payroll',
-      label: 'Payroll',
-      icon: 'payments'
+      label: 'Item 2',
+      icon: 'home'
     },
     {
       path: 'employees',
-      label: 'Employees',
-      icon: 'group'
+      label: 'Item 3',
+      icon: 'home'
     },
     {
       path: 'settings',
-      label: 'Settings',
-      icon: 'settings'
+      label: 'Item 4',
+      icon: 'home'
     }
   ];
 }
