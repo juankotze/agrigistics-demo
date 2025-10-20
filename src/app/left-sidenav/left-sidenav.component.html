@@ -4,29 +4,13 @@
     </div>
     <hr>
     <div class="sidenav-nav">
-        <div class="sidenav-nav-item">
-            <a [routerLink]="'dashboard'" routerLinkActive="active">
-                <i class="material-icons">home</i>
-                <span class="label">Item 1</span>
-            </a>
-        </div>
-        <div class="sidenav-nav-item">
-            <a [routerLink]="'payroll'" routerLinkActive="active">
-                <i class="material-icons">home</i>
-                <span class="label">Item 2</span>
-            </a>
-        </div>
-        <div class="sidenav-nav-item">
-            <a [routerLink]="'employees'" routerLinkActive="active">
-                <i class="material-icons">home</i>
-                <span class="label">Item 3</span>
-            </a>
-        </div>
-        <div class="sidenav-nav-item">
-            <a [routerLink]="'settings'" routerLinkActive="active">
-                <i class="material-icons">home</i>
-                <span class="label">Item 4</span>
-            </a>
-        </div>
+        @for(link of navLinks; track link.path) {
+            <div class="sidenav-nav-item">
+                <a [routerLink]="link.path" routerLinkActive="active">
+                    <i class="material-icons">{{ link.icon }}</i>
+                    <span class="label">{{ link.label }}</span>
+                </a>
+            </div>
+        }
     </div>
 </div>
