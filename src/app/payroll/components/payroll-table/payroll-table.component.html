@@ -1,0 +1,17 @@
+<div class="payroll-table-container">
+    <app-card>
+        <!-- Header Template -->
+        <ng-template #cardHeader>
+            <div class="header">
+                <search-box (onInput)="searchQuery.set($event)"/>
+                <div class="actions">
+                    <button class="action-button secondary">Secondary</button>
+                    <button class="action-button primary">Primary</button>
+                </div>
+            </div>
+        </ng-template>
+
+
+        <data-table [config]="tableConfig" [outsideSearchQuery]="searchQuery()"/>
+    </app-card>
+</div>

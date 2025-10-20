@@ -1,0 +1,83 @@
+<div class="data-table-container">
+    @if (showSearchBar()) {
+        <search-box (onInput)="searchQuery.set($event)"/>
+        <hr>
+    }
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    @for(column of columns(); track column) {
+                        <th [style.width]="column.width" 
+                            [hidden]="column.hide" 
+                            [ngClass]="{'sortable': column.sortable}"
+                            (click)="handleSort(column)">
+                            <div class="th-content">
+                                {{ column.header }}
+                                @if(column.sortable) {
+                                    <i class="material-icons" [class.active]="sortColumn() === column.key">
+                                        {{ getSortIcon(column) }}
+                                    </i>
+                                }
+                            </div>
+                        </th>
+                    }
+                    @if (hasActions()) {
+                        <th class="actions-column" style="width: 120px"></th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @for(row of filteredData(); track row) {
+                    <tr>
+                        @for(column of columns(); track column) {
+                            <td [hidden]="column.hide" [ngStyle]="column.type === DataTableColumnType.currency ? {'text-align': 'right'} : {}">
+                                @switch(column.type) {
+                                    @case(DataTableColumnType.text) {
+                                        {{ row[column.key] }}
+                                    }
+                                    @case(DataTableColumnType.number) {
+                                        {{ row[column.key] }}
+                                    }
+                                    @case(DataTableColumnType.date) {
+                                        {{ asDate(row[column.key]) | date }}
+                                    }
+                                    @case(DataTableColumnType.boolean) {
+                                        <input type="checkbox" [checked]="!!row[column.key]" disabled />
+                                    }
+                                    @case(DataTableColumnType.icon) {
+                                        <i class="bi" [class]="column.displayFn ? column.displayFn(row[column.key], row) : ''"></i>
+                                    }
+                                    @case(DataTableColumnType.currency) {
+                                        @if(row[column.key] != null) {
+                                            {{ asCurrency(row[column.key]) | currency:'R'}}
+                                        } @else {
+                                            --
+                                        }
+                                    }
+                                    @default {
+                                        {{ row[column.key] }}
+                                    }
+                                }
+                            </td>
+                        }
+                        @if (hasActions()) {
+                            <td class="actions-column">
+                                @for(action of actions(); track action) {
+                                    <button class="action-button" [title]="action.label">
+                                        <i class="material-icons" [style.color]="action.color">{{action.icon}}</i>
+                                    </button>
+                                }
+                            </td>
+                        }
+                    </tr>
+                } @empty {
+                    <tr class="no-data-row">
+                        <td [attr.colspan]="columns().length">No data available</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

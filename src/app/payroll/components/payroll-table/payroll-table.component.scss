@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex: 1;
+}
+
+.payroll-table-container  {
+    display: flex;
+    flex: 1;
+
+    .header {
+        display: flex;
+
+        .actions  {
+            margin-left: auto;
+            display: flex;
+            gap: var(--gap-sm);
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.sidenav {
+    background: var(--bg-s);
+    border-right: var(--bd-g-100);
+    transition: all 0.5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 8px;
+        width: 100%;
+        cursor: pointer;
+
+        img {
+            width: 2.5rem;
+            height: auto;
+            
+            &:hover {
+                animation: spin-once 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+            }
+        }
+
+        @keyframes spin-once {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .sidenav-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        list-style: none;
+        padding: 0.5rem;
+        margin: 0;
+        height: calc(100% - 3.65rem);
+
+
+        .sidenav-nav-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 3.5rem;
+            width: 3.5rem;
+
+            &:hover {
+                background-color: #DFE5EC;
+                border-radius: var(--border-radius-xl);
+                cursor: pointer;
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+                color: #666666;
+                font-size: 0.875rem;
+
+                .icon {
+                    font-family: Material Icons Round;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 100%;
+                }
+
+                &:hover {
+                    color: #617B9E;
+                }
+
+                .label {
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 10px;
+                    line-height: 12px;
+                    letter-spacing: 0.5px;
+                    text-transform: capitalize;
+
+                }
+            }
+        }
+
+    }
+}

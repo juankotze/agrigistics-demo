@@ -1,0 +1,14 @@
+<div class="overview-card">
+    @for(item of items(); track item) {
+    <div class="item">
+        <div class="badge"
+            [ngStyle]="{'background-color': item.iconBackgroundColor || defaultConfig.iconBackgroundColor}">
+            <i class="material-icons" [ngStyle]="{'color': item.iconColor || defaultConfig.iconColor}">{{ item.icon }}</i>
+        </div>
+        <div class="info">
+            <p class="label">{{ item.label }}</p>
+            <h4>{{ item.value | spacedCurrency }}</h4>
+        </div>
+    </div>
+    }
+</div>

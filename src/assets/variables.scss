@@ -1,0 +1,76 @@
+// Theme Colors
+$white: #FFFFFF;
+$grey-50: #F9F9F9;
+$grey-75: #F2F2F2;
+$grey-100: #E6E6E6;
+$grey-700: #4D4D4D;
+$grey-800: #333333;
+
+$primary-500: hsl(194, 70%, 40%);
+$primary-700: #176982;
+
+// Text Color
+$text-primary: #000000;
+$text-secondary: #666666;
+
+// Background Color
+$background-color-primary: $white;
+$background-color-primary-700: $primary-700;
+
+$background-color-secondary: $white;
+
+// Border Color
+$border-color-primary: $grey-100;
+$border-color-secondary: $grey-800;
+
+// Border Size
+$border-size-primary: 1px;
+
+// Border radius
+$border-radius-sm: 0.25rem;
+$border-radius: 0.5rem;
+$border-radius-lg: 0.75rem;
+$border-radius-xl: 1rem;
+
+// Gap
+$gap-xs: 0.25rem;
+$gap-sm: 0.5rem;
+$gap-md: 0.75rem;
+$gap: 1rem;
+$gap-lg: 1.5rem;
+$gap-xl: 2rem;
+
+// Export as CSS variables for component usage
+:root {
+  --text-p: #{$text-primary};
+  --text-s: #{$text-secondary};
+  --text-g-700: #{$grey-700};
+  --text-w: #{$white};
+  --text-g-700: #{$grey-700};
+  --text-g-800: #{$grey-800};
+  --bg-p: #{$background-color-primary};
+  --bg-p-700: #{$primary-700};
+  --bg-p-500: #{$primary-500};
+  --bg-s: #{$background-color-secondary};
+  --bg-g-50: #{$grey-50};
+  --bg-g-75: #{$grey-75};
+  --bg-g-100: #{$grey-100};
+
+  --bd-w: #{$white} #{$border-size-primary} solid;
+  --bd-g-100: #{$grey-100} #{$border-size-primary} solid;
+  --bd-p-700: #{$primary-700} #{$border-size-primary} solid;
+  --bd-strong: #{$grey-800} #{$border-size-primary} solid;
+  --border-color-primary: #{$border-color-primary};
+
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius: #{$border-radius};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-xl: #{$border-radius-xl};
+
+  --gap-xs: #{$gap-xs};
+  --gap-sm: #{$gap-sm};
+  --gap-md: #{$gap-md};
+  --gap: #{$gap};
+  --gap-lg: #{$gap-lg};
+  --gap-xl: #{$gap-xl};
+}

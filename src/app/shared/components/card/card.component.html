@@ -1,0 +1,22 @@
+<div class="card" [ngStyle]="{'max-width': maxWidth, 'width': width, 'height': height}">
+    @if (headerTemplate) {
+        <div class="card-header">
+            <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+        </div>
+        <hr/>
+    }
+    
+    <div class="card-body">
+        @if (contentTemplate) {
+            <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+        } @else {
+            <ng-content></ng-content>
+        }
+    </div>
+
+    @if (footerTemplate) {
+        <div class="card-footer">
+            <ng-container *ngTemplateOutlet="footerTemplate"></ng-container>
+        </div>
+    }
+</div>

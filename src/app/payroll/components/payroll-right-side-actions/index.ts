@@ -1,0 +1,1 @@
+export * from './payroll-right-side-actions.component';

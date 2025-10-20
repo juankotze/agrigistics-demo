@@ -1,0 +1,35 @@
+<div class="payroll-summary-container">
+    <app-card maxWidth="20rem">
+        <!-- Header Template -->
+        <ng-template #cardHeader>
+            <div class="header">
+                <button class="back-button">
+                    <i class="material-icons">arrow_back</i>
+                </button>
+                <div class="employee-info">
+                    <h3 class="employee-name">{{ employee()!.fullName }}</h3>
+                    <div class="employee-details">
+                        <div class="detail">
+                            <span class="label">No.</span>
+                            <span class="value">{{ employee()!.id }}</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Team</span>
+                            <span class="value">{{ employee()!.team }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <!-- Card Body Template -->
+        <ng-template #cardContent>
+            <div class="overviews">
+                <!-- Body content will go here -->
+                <h4>Overview</h4>
+                <overview-card [items]="overviewCardInfo()"></overview-card>
+                <overview-card [items]="deductionsCardInfo()"></overview-card>
+            </div>
+        </ng-template>
+    </app-card>
+</div>

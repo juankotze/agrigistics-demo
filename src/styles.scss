@@ -1,0 +1,170 @@
+@import 'assets/variables';
+@import 'material-icons/iconfont/material-icons.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Verdana, sans-serif;
+  background-color: #f3f3f3;
+  color: #000000;
+  line-height: 1.6;
+  height: 100%;
+  //overflow: hidden;
+}
+
+app-root {
+  display: flex;
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+app-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+
+  &>* {
+    flex: 1 1 100%;
+    padding: 0.5rem;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+h3 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  letter-spacing: 0%;
+  cursor: default;
+}
+
+h4 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  cursor: default;
+}
+
+.label {
+  color: #666666;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.5px;
+  cursor: default;
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-top: var(--bd-g-100);
+}
+
+.action-button {
+  padding: 10px 15px;
+  border-radius: var(--border-radius-sm);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  font-style: Medium;
+  letter-spacing: 0.1px;
+
+  &.primary {
+    border: var(--bd-p-700);
+    background-color: var(--bg-p-700);
+    color: var(--text-w);
+
+    &:hover {
+      background-color: var(--bg-p-500);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--bg-s);
+    border: var(--bd-strong);
+    color: var(--text-g-800);
+
+    &:hover {
+      background-color: var(--bg-g-100);
+    }
+  }
+}
+
+th {
+  color: var(--text-g-700);
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.5px;
+
+  cursor: default;
+
+  &.sortable {
+    cursor: pointer;
+  }
+
+  i {
+    &.material-icons{
+      font-family: Material Icons Round;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+    }
+  }
+}
+
+td {
+  cursor: default;
+}

@@ -1,0 +1,42 @@
+.actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    width: 4rem;
+    
+    .action-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 3.5rem;
+        width: 3.5rem;
+        background: none;
+        border: none;
+        border-radius: var(--border-radius-xl);
+        cursor: pointer;
+        color: #666666;
+        transition: all 0.2s ease;
+
+        i {
+            font-family: 'Material Icons Round';
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+        }
+
+        span {
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 10px;
+            line-height: 12px;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+        }
+
+        &:hover {
+            background-color: #DFE5EC;
+            color: #617B9E;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<div class="actions-list">
+    @for(action of actions; track action.id; let i = $index) {
+        <button class="action-item" (click)="onAction(action.id)">
+            <i class="material-icons">{{ action.icon }}</i>
+            <span>{{ action.label }}</span>
+        </button>
+        <hr *ngIf="i < actions.length - 1">
+    }
+</div>
