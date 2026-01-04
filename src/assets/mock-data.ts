@@ -33,3 +33,20 @@ export const MockPayrollData: IPayrollItem[] = (payrollJsonData as any[]).map(it
     rate: item.rate,
     important: !!item.important
 }));
+
+import clockingJsonData from './clocking-data.json';
+import { IClockingResponse } from "../app/shared/models/clocking.type";
+export const MockClockingData: IClockingResponse[] = (clockingJsonData as any[]).map(item => ({
+    clockId: item.clockId,
+    employeeId: item.employeeId,
+    employeeName: item.employeeName,
+    employeeNumber: item.employeeNumber,
+    employeeActivityName: item.employeeActivityName,
+    date: item.date,
+    formattedTime: item.formattedTime,
+    isClockIn: item.isClockIn,
+    clockLocation: item.clockLocation ? { lat: item.clockLocation.lat, lon: item.clockLocation.lon } : null,
+    shiftStartTime: item.shiftStartTime,
+    geoFenceStatus: item.geoFenceStatus,
+    geoFenceApprovalStatus: item.geoFenceApprovalStatus
+}));

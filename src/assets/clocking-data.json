@@ -1,0 +1,172 @@
+[
+  {
+    "clockId": "CLK-2026-001",
+    "employeeId": "EMP-001",
+    "employeeName": "John Smith",
+    "employeeNumber": "1001",
+    "employeeActivityName": "General Work",
+    "date": "2026-01-04T07:15:00+02:00",
+    "formattedTime": "07:15",
+    "isClockIn": true,
+    "clockLocation": {
+      "lat": -33.5978403,
+      "lon": 18.4497668
+    },
+    "shiftStartTime": "07:00",
+    "geoFenceStatus": "Valid",
+    "geoFenceApprovalStatus": "Approved"
+  },
+  {
+    "clockId": "CLK-2026-002",
+    "employeeId": "EMP-002",
+    "employeeName": "Sarah Johnson",
+    "employeeNumber": "1002",
+    "employeeActivityName": "Harvesting",
+    "date": "2026-01-04T07:22:00+02:00",
+    "formattedTime": "07:22",
+    "isClockIn": true,
+    "clockLocation": {
+      "lat": -33.5980125,
+      "lon": 18.4495321
+    },
+    "shiftStartTime": "07:00",
+    "geoFenceStatus": "Review Needed",
+    "geoFenceApprovalStatus": null
+  },
+  {
+    "clockId": "CLK-2026-003",
+    "employeeId": "EMP-003",
+    "employeeName": "Michael Brown",
+    "employeeNumber": "1003",
+    "employeeActivityName": "General Work",
+    "date": "2026-01-04T07:05:00+02:00",
+    "formattedTime": "07:05",
+    "isClockIn": true,
+    "clockLocation": {
+      "lat": -33.5976892,
+      "lon": 18.4499234
+    },
+    "shiftStartTime": "07:00",
+    "geoFenceStatus": "Valid",
+    "geoFenceApprovalStatus": "Approved"
+  },
+  {
+    "clockId": "CLK-2026-004",
+    "employeeId": "EMP-004",
+    "employeeName": "Emily Davis",
+    "employeeNumber": "1004",
+    "employeeActivityName": "Packing",
+    "date": "2026-01-04T07:18:00+02:00",
+    "formattedTime": "07:18",
+    "isClockIn": true,
+    "clockLocation": {
+      "lat": -33.5979567,
+      "lon": 18.4498901
+    },
+    "shiftStartTime": "07:00",
+    "geoFenceStatus": "Valid",
+    "geoFenceApprovalStatus": "Approved"
+  },
+  {
+    "clockId": "CLK-2026-005",
+    "employeeId": "EMP-005",
+    "employeeName": "David Wilson",
+    "employeeNumber": "1005",
+    "employeeActivityName": "Maintenance",
+    "date": "2026-01-04T07:30:00+02:00",
+    "formattedTime": "07:30",
+    "isClockIn": true,
+    "clockLocation": {
+      "lat": -33.5982145,
+      "lon": 18.4501234
+    },
+    "shiftStartTime": "07:00",
+    "geoFenceStatus": "Invalid",
+    "geoFenceApprovalStatus": "Declined"
+  },
+  {
+    "clockId": "CLK-2026-006",
+    "employeeId": "EMP-006",
+    "employeeName": "Lisa Martinez",
+    "employeeNumber": "1006",
+    "employeeActivityName": "Harvesting",
+    "date": "2026-01-04T07:12:00+02:00",
+    "formattedTime": "07:12",
+    "isClockIn": true,
+    "clockLocation": {
+      "lat": -33.5977234,
+      "lon": 18.4496543
+    },
+    "shiftStartTime": "07:00",
+    "geoFenceStatus": "Valid",
+    "geoFenceApprovalStatus": "Approved"
+  },
+  {
+    "clockId": "CLK-2026-007",
+    "employeeId": "EMP-001",
+    "employeeName": "John Smith",
+    "employeeNumber": "1001",
+    "employeeActivityName": "General Work",
+    "date": "2026-01-04T16:05:00+02:00",
+    "formattedTime": "16:05",
+    "isClockIn": false,
+    "clockLocation": {
+      "lat": -33.5978512,
+      "lon": 18.4497891
+    },
+    "shiftStartTime": "07:00",
+    "geoFenceStatus": "Valid",
+    "geoFenceApprovalStatus": "Approved"
+  },
+  {
+    "clockId": "CLK-2026-008",
+    "employeeId": "EMP-003",
+    "employeeName": "Michael Brown",
+    "employeeNumber": "1003",
+    "employeeActivityName": "General Work",
+    "date": "2026-01-04T16:02:00+02:00",
+    "formattedTime": "16:02",
+    "isClockIn": false,
+    "clockLocation": {
+      "lat": -33.5976745,
+      "lon": 18.4499123
+    },
+    "shiftStartTime": "07:00",
+    "geoFenceStatus": "Valid",
+    "geoFenceApprovalStatus": "Approved"
+  },
+  {
+    "clockId": "CLK-2026-009",
+    "employeeId": "EMP-007",
+    "employeeName": "Robert Anderson",
+    "employeeNumber": "1007",
+    "employeeActivityName": null,
+    "date": "2026-01-04T08:45:00+02:00",
+    "formattedTime": "08:45",
+    "isClockIn": true,
+    "clockLocation": {
+      "lat": -33.5975678,
+      "lon": 18.4495234
+    },
+    "shiftStartTime": "08:00",
+    "geoFenceStatus": "Review Needed",
+    "geoFenceApprovalStatus": null
+  },
+  {
+    "clockId": "CLK-2026-010",
+    "employeeId": "EMP-008",
+    "employeeName": "Jennifer Taylor",
+    "employeeNumber": "1008",
+    "employeeActivityName": "Quality Control",
+    "date": "2026-01-04T08:02:00+02:00",
+    "formattedTime": "08:02",
+    "isClockIn": true,
+    "clockLocation": {
+      "lat": -33.5980234,
+      "lon": 18.4498765
+    },
+    "shiftStartTime": "08:00",
+    "geoFenceStatus": "Valid",
+    "geoFenceApprovalStatus": "Approved"
+  }
+]
